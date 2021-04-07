@@ -1,0 +1,110 @@
+.whatAreWeDoing {
+  padding: 56px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.whatAreWeDoing h1 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.37;
+  text-align: right;
+  color: #141314;
+  text-transform: uppercase;
+}
+
+.opensourceCreator-container {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.opensourceCreator-container h2 {
+  background-image: linear-gradient(to bottom, #9bc5fa, #7c68b2);
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.37;
+  letter-spacing: 0.67px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.aboutOpenCollective-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.opensourceCreator-container p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #141314;
+}
+
+.stockOwnerContainer h4,
+.aboutOpenCollective-container h4 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.54;
+  letter-spacing: 0.8px;
+  color: #2c2b2c;
+  margin-bottom: 16px;
+}
+
+.useYourStockForGood,
+.openCollectiveRounded {
+  width: 176px;
+  height: 176px;
+  margin: 16px 0 0 111px;
+  padding: 52px 24px;
+  border: solid 1px #0d2bff;
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+}
+
+.useYourStockForGood a,
+.openCollectiveRounded a {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.stockOwnerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.stockOwnerContainer h3 {
+  background-image: linear-gradient(to bottom, #7c68b2, #ea70a7 99%);
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.37;
+  letter-spacing: 0.67px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.stockOwnerContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #141314;
+}
+
+.stockOwnerContainer h4 {
+  text-align: right;
+}
