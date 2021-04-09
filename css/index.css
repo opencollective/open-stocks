@@ -103,7 +103,13 @@ div {
   box-sizing: border-box;
 }
 
-button {
+button,
+a {
+  cursor: pointer !important;
+}
+
+button:hover,
+a:hover {
   cursor: pointer;
 }
 
