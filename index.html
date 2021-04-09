@@ -16,9 +16,46 @@
     <link rel="stylesheet" href="/css/letStart.css" />
   </head>
   <body>
-    <div class="sideMenuWrapper">
+    <div class="desktopNav">
+      <div class="desktopNavCloseIconWrapper js-desktopMenuToggle">
+        <button class="menuButton">
+          <img src="/images/close-icon.svg" alt="Close Icon" />
+        </button>
+      </div>
+      <div class="desktopNavContent">
+        <div class="desktopNavHeader">
+          <a class="logo-link" href="/">
+            <img src="/images/logo-oc-light.svg" alt="Logo" />
+          </a>
+        </div>
+        <ul class="desktopNavListWrapper">
+          <a href="#whatAreWeDoing">
+            <li class="desktopNavList">What are we doing?</li>
+          </a>
+          <a href="#howItWorks">
+            <li class="desktopNavList">How it works?</li>
+          </a>
+          <a href="#letStart">
+            <li class="desktopNavList">Let’s start</li>
+          </a>
+          <a href="#whoWeAre">
+            <li class="desktopNavList">Who we are?</li>
+          </a>
+        </ul>
+        <div class="desktopNavFooter">
+          <div class="desktopNavFooterLogoWrapper">
+            <img
+              src="/images/mobile-nav-footer-logo.png"
+              alt="Open Source collective"
+            />
+          </div>
+          <p class="copyRightText">Copyright © 2021 Open collective Inc</p>
+        </div>
+      </div>
+    </div>
+    <div class="sideMenuWrapper js-desktopMenuToggle">
       <div class="sideMenu">
-        <button class="menuButton js-menuToggle">
+        <button class="menuButton">
           <img src="/images/menu-icon.svg" alt="Menu Icon" />
         </button>
       </div>

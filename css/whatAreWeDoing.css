@@ -224,3 +224,38 @@
     margin-bottom: 24px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .whatAreWeDoing h1 {
+    max-width: 928px;
+  }
+  .whatAreWeDoingContainer {
+    margin-top: 30px;
+  }
+  .opensourceCreator-container {
+    margin-right: 68px;
+  }
+  .stockOwnerContainer {
+    margin-left: 68px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .whatAreWeDoing {
+    align-items: center;
+  }
+  .whatAreWeDoing h1 {
+    max-width: 1050px;
+    align-self: center;
+  }
+  .desktop-logo {
+    align-self: flex-start;
+  }
+  .whatAreWeDoingContainer {
+    justify-content: flex-end;
+  }
+  .stockOwnerContainer,
+  .opensourceCreator-container {
+    max-width: 448px;
+  }
+}

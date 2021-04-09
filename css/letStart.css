@@ -335,3 +335,46 @@
     top: 40px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .letStartWrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 1200px;
+    align-items: flex-start;
+    padding-left: 149px;
+    padding-right: 16px;
+  }
+  .letStartContainer p {
+    max-width: 736px;
+    font-size: 26px;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.8px;
+  }
+  .buttonContainer button {
+    width: 395px;
+  }
+  .weAreOpenContainerCommunity {
+    align-self: stretch;
+    max-width: 100%;
+  }
+  .weAreOpenContainerBgText-tablet {
+    background: url(/images/text-bg-dekstop.png) no-repeat;
+    background-size: cover;
+    /* background-position-x: -90px; */
+    width: 87%;
+    top: 62%;
+  }
+  .sustainCommunities {
+    max-width: 501px;
+  }
+  .weveBeen {
+    align-self: flex-start;
+    position: relative;
+    left: -10%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
