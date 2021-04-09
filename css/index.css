@@ -93,6 +93,11 @@ video {
 }
 
 body {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
   /* background-image: linear-gradient(
     to top,
     #9bc5fa 100%,
@@ -100,8 +105,41 @@ body {
     #ea70a7 32%,
     #9bc5fa 0%
   ); */
+
+  font-family: "canada-type-gibson", sans-serif;
 }
 
 div {
   box-sizing: border-box;
+}
+
+.backgroundGradient {
+  background-image: linear-gradient(
+    to top,
+    #9bc5fa 100%,
+    #7c68b2 67%,
+    #ea70a7 32%,
+    #9bc5fa 0%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.hideBgGradient {
+  z-index: -1;
+}
+
+.showFlex {
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
 }

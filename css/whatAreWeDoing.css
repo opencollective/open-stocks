@@ -3,6 +3,29 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  position: relative;
+}
+
+.whatAreWeDoing::before {
+  background-image: linear-gradient(
+    to top,
+    #9bc5fa 100%,
+    #7c68b2 67%,
+    #ea70a7 32%,
+    #9bc5fa 0%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 0;
+  content: " ";
+}
+
+.desktop-logo {
+  display: none;
 }
 
 .whatAreWeDoing h1 {
@@ -86,7 +109,7 @@
   flex-direction: column;
 }
 
-.stockOwnerContainer h3 {
+.stockOwnerContainer h2 {
   background-image: linear-gradient(to bottom, #7c68b2, #ea70a7 99%);
   font-size: 35px;
   font-weight: bold;
@@ -96,6 +119,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 .stockOwnerContainer p {
@@ -107,4 +131,96 @@
 
 .stockOwnerContainer h4 {
   text-align: right;
+}
+
+.illustration {
+  display: flex;
+}
+
+.openSourceCreator-illustration {
+  width: 269px;
+  object-fit: contain;
+}
+
+.stockOwner-illustration {
+  width: 271px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .whatAreWeDoing h1 {
+    font-size: 42px;
+    line-height: 1.14;
+    letter-spacing: 0.8px;
+    text-align: right;
+    max-width: 480px;
+    align-self: flex-end;
+  }
+
+  .whatAreWeDoingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .opensourceCreator-container,
+  .stockOwnerContainer {
+    max-width: 352px;
+  }
+
+  .opensourceCreator-container {
+    margin-right: 16px;
+  }
+  .stockOwnerContainer {
+    margin-left: 16px;
+  }
+
+  .opensourceCreator-container p,
+  .opensourceCreator-container h2 {
+    text-align: left;
+  }
+
+  .stockOwnerContainer p,
+  .stockOwnerContainer h2 {
+    text-align: right;
+  }
+
+  .useYourStockForGood,
+  .openCollectiveRounded {
+    margin: 0;
+  }
+
+  .areYouReadyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .stockOwnerContainer h2,
+  .opensourceCreator-container h2 {
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .desktop-logo {
+    display: block;
+    margin-left: 64px;
+    margin-bottom: 64px;
+  }
+  .whatAreWeDoing h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 1.11;
+    max-width: 722px;
+    text-align: right;
+    letter-spacing: normal;
+  }
+  .stockOwnerContainer h2,
+  .opensourceCreator-container h2 {
+    font-size: 42px;
+    line-height: 1.33;
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+  }
 }

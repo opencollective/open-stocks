@@ -3,6 +3,25 @@
   background-image: linear-gradient(to bottom, #141314 0%, #141314);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.useYourStockForGood-container::before {
+  opacity: 0.2;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #7c68b2,
+    rgba(234, 112, 167, 0) 75%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  content: " ";
 }
 
 .useYourStockForGood-container h2 {
@@ -21,11 +40,18 @@
   letter-spacing: 0.4px;
   color: #f60dff;
   text-transform: uppercase;
-  width: 238px;
+  max-width: 238px;
   align-self: flex-end;
 }
 
+.stepsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .step {
+  margin-top: 40px;
   width: 135px;
   height: 232px;
   padding: 32px 16px 24px;
@@ -37,13 +63,92 @@
 }
 
 .step h3 {
-  padding: 0 0 144px;
-  opacity: 0.1;
-  background-image: linear-gradient(
-    to top,
-    #9bc5fa 100%,
-    #7c68b2 67%,
-    #ea70a7 32%,
-    #9bc5fa 0%
-  );
+  -webkit-text-stroke: 1px #2b0ce8;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.37px;
+  color: #141314;
+}
+
+.step p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #9d9fa3;
+}
+
+.step2 h3 {
+  -webkit-text-stroke: 1px #6b00ff;
+}
+
+.step3 h3 {
+  -webkit-text-stroke: 1px #f60dff;
+}
+
+.step4 h3 {
+  -webkit-text-stroke: 1px #a40ce8;
+}
+
+.step5 h3 {
+  -webkit-text-stroke: 1px #a40ce8;
+}
+
+@media screen and (min-width: 768px) {
+  .useYourStockForGood-container {
+    padding-bottom: 80px;
+  }
+  .useYourStockForGood-container h2 {
+    font-size: 72px;
+    line-height: 1.11;
+    max-width: 704px;
+  }
+
+  .useYourStockForGood-container h5 {
+    max-width: 480px;
+  }
+
+  .step {
+    background-image: linear-gradient(to bottom, #141314 0%, #141314);
+    z-index: 1;
+    width: 224px;
+    height: 400px;
+    padding: 64px 22px 112px;
+    border-radius: 4px;
+    border: solid 1px #9d9fa3;
+    background-color: #141314;
+  }
+
+  .step h3 {
+    font-size: 92px;
+    font-weight: bold;
+    line-height: 1.13;
+    letter-spacing: 0.8px;
+  }
+
+  .step p {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.4px;
+    margin-top: 24px;
+  }
+
+  .step5 h3 {
+    -webkit-text-stroke: 1px #0d2bff;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .useYourStockForGood-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  .useYourStockForGood-container h2 {
+    max-width: 864px;
+  }
+  .useYourStockForGood-container h5 {
+    font-size: 26px;
+    line-height: 1.54;
+    letter-spacing: 0.8px;
+  }
 }

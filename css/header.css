@@ -1,4 +1,119 @@
 .header {
   height: 56px;
   background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 16px;
+  align-items: center;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.mobileNav {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 999999;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #a400ff, #6b00ff);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobileNavContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mobileNavHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.mobileNavListWrapper {
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.mobileNavListWrapper a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.mobileNavList {
+  list-style: none;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.23;
+  letter-spacing: 0.8px;
+  text-align: right;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.mobileNavFooter {
+  align-self: flex-end;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+
+.mobileNavFooterLogoWrapper {
+  display: flex;
+}
+
+.mobileNavFooterLogoWrapper img {
+  width: 100%;
+}
+
+.copyRightText {
+  font-size: 13px;
+  line-height: 1.85;
+  letter-spacing: 0.8px;
+  color: #f7f8fa;
+  margin-top: 8px;
+}
+
+.sideMenuWrapper {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
+  .sideMenuWrapper {
+    display: block;
+    width: 80px;
+    height: 100%;
+    background-color: #141314;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+  }
+  .sideMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .mainContent {
+    position: relative;
+    left: 80px;
+    width: calc(100% - 80px);
+  }
 }
