@@ -95,17 +95,7 @@ video {
 body {
   min-height: 100%;
   position: relative;
-}
-
-body {
-  /* background-image: linear-gradient(
-    to top,
-    #9bc5fa 100%,
-    #7c68b2 67%,
-    #ea70a7 32%,
-    #9bc5fa 0%
-  ); */
-
+  scroll-behavior: smooth;
   font-family: "canada-type-gibson", sans-serif;
 }
 
