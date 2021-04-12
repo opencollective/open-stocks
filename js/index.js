@@ -3,6 +3,13 @@ $(document).ready(function () {
   $(".js-menuToggle").click(handleMobileMenuToggle);
   // desktop menu toggle
   $(".js-desktopMenuToggle").click(handleDesktopMenuToggle);
+  $(".js-navLink").click(() => {
+    if ($(".mobileNav").is(":visible")) {
+      $(".mobileNav").css("display", "none");
+    } else if ($(".desktopNav").is(":visible")) {
+      $(".desktopNav").css("display", "none");
+    }
+  });
 
   function handleMobileMenuToggle() {
     $(".mobileNav").slideToggle("slow", () => {
@@ -13,7 +20,6 @@ $(document).ready(function () {
   }
 
   function handleDesktopMenuToggle() {
-    console.log("I was here");
     $(".desktopNav").animate(
       {
         width: "toggle",
