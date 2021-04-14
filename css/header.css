@@ -52,6 +52,16 @@
   color: #ffffff;
 }
 
+.desktopNavListWrapper a:hover,
+.mobileNavListWrapper a:hover {
+  color: #141314;
+}
+
+.desktopNavListWrapper a:focus,
+.mobileNavListWrapper a:focus {
+  color: #c4c7cc;
+}
+
 .mobileNavList {
   list-style: none;
   font-size: 26px;
