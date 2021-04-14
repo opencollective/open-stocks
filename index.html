@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/whatAreWeDoing.css" />
     <link rel="stylesheet" href="/css/useYourStockForGood.css" />
     <link rel="stylesheet" href="/css/letStart.css" />
+    <link rel="stylesheet" href="/css/whoWeAre.css" />
   </head>
   <body>
     <div class="desktopNav">
@@ -106,49 +107,44 @@
         </div>
       </div>
       <section id="whatAreWeDoing">
-        <div class="whatAreWeDoing">
-          <a href="/" class="logo-link desktop-logo">
-            <img src="/images/logo-oc-dark.svg" alt="Open collective Logo" />
-          </a>
-          <h1>Use your public stocks to support open source creators</h1>
-          <div class="whatAreWeDoingContainer">
-            <div class="opensourceCreator-container">
-              <h2>Open source creator</h2>
-              <p>
-                If you are already part of the Open Source Collective, you can
-                invite your contributors to use their stock to support your
-                projects, they just need to click on the button on the following
-                section 👇
-              </p>
-              <div class="aboutOpenCollective-container">
-                <h4>Haven’t heard of open collective</h4>
-                <div class="openCollectiveRounded">
-                  <a href="#" target="_blank">Visit Open Collective</a>
+        <div class="whatAreWeDoingContent">
+          <div class="whatAreWeDoing">
+            <a href="/" class="logo-link desktop-logo">
+              <img src="/images/logo-oc-dark.svg" alt="Open collective Logo" />
+            </a>
+            <h1>Use your public stocks to support open source creators</h1>
+            <div class="illustration tablet-desktop-illustration"></div>
+            <div class="whatAreWeDoingContainer">
+              <div class="opensourceCreator-container">
+                <h2>Open source creator</h2>
+                <p>
+                  If you are already part of the Open Source Collective, you can
+                  invite your contributors to use their stock to support your
+                  projects, they just need to click on the button on the
+                  following section 👇
+                </p>
+                <div class="aboutOpenCollective-container">
+                  <h4>Haven’t heard of open collective</h4>
+                  <div class="openCollectiveRounded">
+                    <a href="#" target="_blank">Visit Open Collective</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- <div class="illustration">
-              <img
-                class="openSourceCreator-illustration"
-                src="/images/openSourceCreator-illustration.png"
-              />
-              <img
-                class="stockOwner-illustration"
-                src="/images/stockOwner-illustration.png"
-              />
-            </div> -->
-            <div class="stockOwnerContainer">
-              <h2>Stock owner</h2>
-              <p>
-                Over the years, multiple tech companies have gone public giving
-                their employees publicly traded stock. Stock owners can now
-                share them with the open source creators that have developed the
-                software that helped them build and run their products.
-              </p>
-              <div class="areYouReadyContainer">
-                <h4>Are you ready?</h4>
-                <div class="useYourStockForGood">
-                  <a>Use your stock for Good</a>
+              <div class="illustration illustration-mobile"></div>
+              <div class="stockOwnerContainer">
+                <h2>Stock owner</h2>
+                <p>
+                  Over the years, multiple tech companies have gone public
+                  giving their employees publicly traded stock. Stock owners can
+                  now share them with the open source creators that have
+                  developed the software that helped them build and run their
+                  products.
+                </p>
+                <div class="areYouReadyContainer">
+                  <h4>Are you ready?</h4>
+                  <div class="useYourStockForGood">
+                    <a>Use your stock for Good</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,15 +164,31 @@
             </div>
             <div class="step step2">
               <h3>02</h3>
-              <p>Support your project using your stocks</p>
+              <p class="visible-sm">
+                Support your project using your stocks and save the capital
+                gains tax of liquidating them
+              </p>
+              <p class="visible-xs">Support your project using your stocks</p>
             </div>
             <div class="step step3">
-              <h3>03</h3>
-              <p>Support your selected project using your stocks</p>
+              <div class="step3Content">
+                <h3>03</h3>
+                <p class="visible-sm">
+                  OSC team will receive the stock and it will be converted to
+                  cash immediately
+                </p>
+                <p class="visible-xs">
+                  Support your selected project using your stocks
+                </p>
+              </div>
             </div>
             <div class="step step4">
               <h3>04</h3>
-              <p>
+              <p class="visible-sm">
+                The cash will be transferred automatically to the project’s
+                balance and acknowledge your contribution
+              </p>
+              <p class="visible-xs">
                 The cash will be transferred automatically to the project
                 balance
               </p>
@@ -189,56 +201,111 @@
         </div>
       </section>
       <section id="letStart">
-        <div class="letStartWrapper">
-          <div class="letStartContainer">
-            <h2>Let's start!</h2>
-            <p>
-              Ok, you are ready to start using this new feature, and that's
-              great. Let us know a bit more about you:
-            </p>
-          </div>
-
-          <div class="whatDescribeYouContainer">
-            <h4>
-              <span>1</span>
-              What describes you best?
-            </h4>
-
-            <div class="buttonContainer">
-              <button class="creatorButton">
-                <span>Open source creator</span>
-              </button>
-              <button class="stockOwnerButton">
-                <span>Stock owner</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="weAreOpenContainerCommunity">
-            <div class="weAreOpenContainer">
-              <h3 class="weAre">We are</h3>
-              <h3 class="weAreOpen">Open</h3>
-              <div class="weAreOpenContainerBgText"></div>
-            </div>
-
-            <div class="sustainCommunities">
-              <h4>And we love to sustain communities!</h4>
+        <div class="letStartContent">
+          <div class="letStartWrapper">
+            <div class="letStartContainer">
+              <h2>Let's start!</h2>
               <p>
-                Open Collective has worked with hundreds of initiatives to be
-                funded and kept running, so everyone's project keeps supporting
-                their communities, and the technology development never stops.
+                Ok, you are ready to start using this new feature, and that's
+                great. Let us know a bit more about you:
               </p>
             </div>
-          </div>
-          <div class="weAreOpenContainerBgText-tablet"></div>
-          <div class="weveBeen">
-            <p>
-              We've been working on new ways to make it easier for you to
-              support and contribute to your favorite collectives…
-            </p>
 
-            <div class="openCollectiveRounded last">
-              <a href="#" target="_blank">Visit Open Collective</a>
+            <div>
+              <div class="whatDescribeYouContainer">
+                <h4>
+                  <span>1</span>
+                  What describes you best?
+                </h4>
+
+                <div class="buttonContainer">
+                  <button class="creatorButton activeOpenSourceCreator">
+                    <span>Open source creator</span>
+                  </button>
+                  <button class="stockOwnerButton">
+                    <span>Stock owner</span>
+                  </button>
+                </div>
+              </div>
+              <div class="whatDescribeYouContainer">
+                <h4>
+                  <span>2</span>
+                  Awesome! we need your email
+                </h4>
+                <div class="formContainer">
+                  <p class="formInstruction openSourceCreator">
+                    If you are a collective on the Open Source Collective you
+                    will automatically be able to receive stocks. If you are
+                    not,
+                    <a href="#">join us</a>!
+                  </p>
+                  <p class="formInstruction stockOwner">
+                    Make sure you add the projects you want to fund on the text
+                    field in the checkout form. If the collective you want to
+                    fund is not on Open Collective, please
+                    <a href="#">let us know</a>.
+                  </p>
+                  <form>
+                    <div class="formInputContainer">
+                      <img src="/images/envelope-icon.svg" />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email here"
+                      />
+                    </div>
+                    <div class="formCheckboxContainer openSourceCreator">
+                      <input
+                        id="alreadyOnOC_id"
+                        type="checkbox"
+                        name="alreadyOnOC"
+                      />
+                      <label for="alreadyOnOC_id"
+                        >I already have a Collective on Open Collective</label
+                      >
+                    </div>
+                    <button class="submitContactBtn" type="submit">
+                      <span class="openSourceCreator"
+                        >Let us know you are interested</span
+                      >
+                      <span class="stockOwner">Go to checkout</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="whoWeAre">
+        <div class="whoWeAreContent">
+          <div class="whoWeAre">
+            <div class="weAreOpenContainerCommunity">
+              <div class="weAreOpenContainer">
+                <h3 class="weAre">We are</h3>
+                <h3 class="weAreOpen">Open</h3>
+                <div class="weAreOpenContainerBgText"></div>
+              </div>
+
+              <div class="sustainCommunities">
+                <h4>And we love to sustain communities!</h4>
+                <p>
+                  Open Collective has worked with hundreds of initiatives to be
+                  funded and kept running, so everyone's project keeps
+                  supporting their communities, and the technology development
+                  never stops.
+                </p>
+              </div>
+            </div>
+            <div class="weAreOpenContainerBgText-tablet"></div>
+            <div class="weveBeen">
+              <p>
+                We've been working on new ways to make it easier for you to
+                support and contribute to your favorite collectives…
+              </p>
+              <div class="openCollectiveRounded last">
+                <a href="#" target="_blank">Visit Open Collective</a>
+              </div>
             </div>
           </div>
         </div>

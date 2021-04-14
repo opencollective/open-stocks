@@ -108,9 +108,19 @@ a {
   cursor: pointer !important;
 }
 
+a,
+button,
+input {
+  z-index: 1;
+}
+
 button:hover,
 a:hover {
   cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .backgroundGradient {
@@ -136,6 +146,20 @@ a:hover {
 
 .showFlex {
   display: flex;
+}
+
+.visible-sm {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .visible-sm {
+    display: block;
+  }
+
+  .visible-xs {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {

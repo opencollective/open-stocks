@@ -11,6 +11,24 @@ $(document).ready(function () {
     }
   });
 
+  $(".creatorButton").click(() => {
+    if (!$(this).hasClass("activeOpenSourceCreator")) {
+      $("button.stockOwnerButton").removeClass("activeStockOwner");
+      $("button.creatorButton").addClass("activeOpenSourceCreator");
+      $(".stockOwner").hide();
+      $(".openSourceCreator").show();
+    }
+  });
+
+  $("button.stockOwnerButton").click(() => {
+    if (!$(this).hasClass("activeStockOwner")) {
+      $(".creatorButton").removeClass("activeOpenSourceCreator");
+      $("button.stockOwnerButton").addClass("activeStockOwner");
+      $(".openSourceCreator").hide();
+      $(".stockOwner").show();
+    }
+  });
+
   function handleMobileMenuToggle() {
     $(".mobileNav").slideToggle("slow", () => {
       if ($(this).is(":visible")) {

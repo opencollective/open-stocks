@@ -48,6 +48,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative;
+  height: 872px;
 }
 
 .step {
@@ -63,7 +65,6 @@
 }
 
 .step h3 {
-  -webkit-text-stroke: 1px #2b0ce8;
   font-size: 42px;
   font-weight: bold;
   line-height: 1.33;
@@ -76,22 +77,56 @@
   line-height: 1.5;
   letter-spacing: 0.4px;
   color: #9d9fa3;
+  min-width: 103px;
 }
 
+@media screen and (min-width: 375px) {
+  .step {
+    position: absolute;
+  }
+
+  .step1 {
+    left: 16px;
+  }
+
+  .step2 {
+    top: 144px;
+    right: 16px;
+  }
+
+  .step3 {
+    left: 16px;
+    top: 272px;
+  }
+
+  .step4 {
+    right: 16px;
+    top: 416px;
+  }
+
+  .step5 {
+    left: 16px;
+    bottom: 56px;
+  }
+}
+
+.step1 h3 {
+  -webkit-text-stroke: 2px #2b0ce8;
+}
 .step2 h3 {
-  -webkit-text-stroke: 1px #6b00ff;
+  -webkit-text-stroke: 2px #6b00ff;
 }
 
 .step3 h3 {
-  -webkit-text-stroke: 1px #f60dff;
+  -webkit-text-stroke: 2px #f60dff;
 }
 
 .step4 h3 {
-  -webkit-text-stroke: 1px #a40ce8;
+  -webkit-text-stroke: 2px #a40ce8;
 }
 
 .step5 h3 {
-  -webkit-text-stroke: 1px #a40ce8;
+  -webkit-text-stroke: 2px #a40ce8;
 }
 
 @media screen and (min-width: 768px) {
@@ -136,6 +171,30 @@
   .step5 h3 {
     -webkit-text-stroke: 1px #0d2bff;
   }
+
+  .stepsContainer {
+    height: 1120px;
+  }
+
+  .step1 {
+    left: 16px;
+  }
+  .step2 {
+    top: 104px;
+    left: 256px;
+  }
+  .step3 {
+    left: 500px;
+    top: 200px;
+  }
+  .step4 {
+    right: 400px;
+    top: 536px;
+  }
+  .step5 {
+    left: 400px;
+    bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -155,12 +214,78 @@
     max-width: 561px;
   }
   .step {
-    width: 288px;
-    height: 400px;
-    padding: 64px 32px 160px;
     border-radius: 4px;
     border: solid 1px #9d9fa3;
     background-color: #141314;
+  }
+  .stepsContainer {
+    height: 1080px;
+  }
+  .step5 {
+    left: 432px;
+    bottom: 15px;
+  }
+  .step3 {
+    padding: unset;
+    box-shadow: 0 4px 32px 0 rgba(246, 13, 255, 0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(
+      to bottom,
+      rgba(124, 104, 178, 0.6),
+      rgba(234, 112, 167, 0.6) 99%
+    );
+    border-image-slice: 1;
+    background-image: linear-gradient(to bottom, #141314, #141314),
+      linear-gradient(
+        to bottom,
+        rgba(124, 104, 178, 0.6),
+        rgba(234, 112, 167, 0.6) 99%
+      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  .step3Content {
+    padding: 64px 22px 112px;
+  }
+  .step3Content h3 {
+    background-image: linear-gradient(130deg, #7c68b2, #ea70a7);
+    line-height: 1.13;
+    letter-spacing: 0.8px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: unset;
+  }
+  .step3Content p {
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .step {
+    width: 288px;
+    padding: 64px 28px 160px;
+  }
+  .step3Content {
+    padding: 64px 28px 160px;
+  }
+  .step2 {
+    top: 104px;
+    left: 352px;
+  }
+  .step3 {
+    left: 682px;
+    top: 200px;
+    padding: unset;
+  }
+  .step4 {
+    right: 656px;
+    top: 536px;
+  }
+  .step5 {
+    left: 460px;
+    bottom: 5px;
   }
 }
 
@@ -181,10 +306,65 @@
     align-self: center;
   }
   .stepsContainer {
-    max-width: 1288px;
+    width: 100%;
   }
   .step {
     width: 328px;
-    height: 400px;
+  }
+  .step2 {
+    top: 104px;
+    left: 390px;
+  }
+  .step3 {
+    left: 766px;
+    top: 200px;
+  }
+  .step4 {
+    right: 720px;
+    top: 536px;
+  }
+  .step5 {
+    left: 556px;
+    bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .useYourStockForGood-container h5 {
+    align-self: flex-end;
+  }
+  .stepsContainer {
+    height: fit-content;
+  }
+  .step {
+    position: unset;
+    width: 248px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .useYourStockForGood-container h5 {
+    align-self: center;
+  }
+  .step {
+    width: 288px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .useYourStockForGood-container h2 {
+    max-width: 1748px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .useYourStockForGood-container h5 {
+    align-self: center;
+    max-width: fit-content;
+    margin-top: 48px;
+    margin-bottom: 104px;
+  }
+  .step {
+    width: 395px;
+    margin-top: 0;
   }
 }

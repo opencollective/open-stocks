@@ -1,18 +1,17 @@
-.whatAreWeDoing {
-  padding: 56px 16px;
+.whatAreWeDoingContent {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.whatAreWeDoing::before {
+.whatAreWeDoingContent::before {
+  background-color: #9bc5fa;
   background-image: linear-gradient(
-    to top,
-    #9bc5fa 100%,
-    #7c68b2 67%,
-    #ea70a7 32%,
-    #9bc5fa 0%
+    180deg,
+    rgba(124, 104, 178, 1) 32%,
+    rgba(234, 112, 167, 1) 67%
   );
   position: absolute;
   top: 0;
@@ -22,6 +21,14 @@
   opacity: 0.1;
   z-index: 0;
   content: " ";
+}
+
+.whatAreWeDoing {
+  padding: 56px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .desktop-logo {
@@ -135,7 +142,19 @@
 }
 
 .illustration {
-  display: flex;
+  width: 100vw;
+  height: 320px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: url("/images/Illustrations-mobile.png") no-repeat;
+  background-size: cover;
+}
+
+.tablet-desktop-illustration {
+  display: none;
 }
 
 .openSourceCreator-illustration {
@@ -171,6 +190,9 @@
 
   .opensourceCreator-container {
     margin-right: 16px;
+    margin-top: 0;
+    position: relative;
+    top: -30px;
   }
   .stockOwnerContainer {
     margin-left: 16px;
@@ -201,12 +223,23 @@
     margin-top: 0px;
     margin-bottom: 8px;
   }
+  .illustration-mobile {
+    display: none;
+  }
+  .tablet-desktop-illustration {
+    display: block;
+    height: 600px;
+    background: url("/images/illustrations-md-768.png") no-repeat;
+    background-size: cover;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .whatAreWeDoing {
+    padding-right: 30px;
+  }
   .desktop-logo {
     display: block;
-    margin-left: 64px;
     margin-bottom: 64px;
   }
   .whatAreWeDoing h1 {
@@ -224,11 +257,31 @@
     letter-spacing: 0.8px;
     margin-bottom: 24px;
   }
+  .tablet-desktop-illustration {
+    align-self: center;
+    width: 812px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("/images/illustrations-md.png") no-repeat;
+    background-size: contain;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .whatAreWeDoing {
+    max-width: 1183px;
+    width: 100%;
+    padding-right: 16px;
+  }
   .whatAreWeDoing h1 {
     max-width: 928px;
+    align-self: flex-end;
   }
   .whatAreWeDoingContainer {
     margin-top: 30px;
@@ -238,6 +291,12 @@
   }
   .stockOwnerContainer {
     margin-left: 68px;
+  }
+  .tablet-desktop-illustration {
+    width: 928px;
+    height: 500px;
+    background: url("/images/illustrations-md-1280.png") no-repeat;
+    background-size: contain;
   }
 }
 
@@ -258,5 +317,77 @@
   .stockOwnerContainer,
   .opensourceCreator-container {
     max-width: 448px;
+  }
+  .tablet-desktop-illustration {
+    width: 1048px;
+    height: 600px;
+    background: url("/images/illustrations-lg-1440.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .whatAreWeDoing {
+    max-width: 1234px;
+    align-items: center;
+  }
+  .whatAreWeDoing h1 {
+    max-width: 942px;
+    align-self: flex-end;
+  }
+  .tablet-desktop-illustration {
+    width: 974px;
+    background: url("/images/illustrations-lg-1680.png") no-repeat;
+    background-size: contain;
+  }
+  .stockOwnerContainer,
+  .opensourceCreator-container {
+    max-width: 528px;
+  }
+  .opensourceCreator-container h4,
+  .stockOwnerContainer h4 {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .whatAreWeDoing {
+    max-width: 1664px;
+  }
+  .whatAreWeDoing h1 {
+    max-width: 1088px;
+    align-self: flex-end;
+    font-size: 92px;
+    line-height: 1.13;
+    letter-spacing: 0.8px;
+  }
+  .tablet-desktop-illustration {
+    width: 1054px;
+    height: 563px;
+    background: url("/images/illustrations-lg-1920.png") no-repeat;
+    background-size: contain;
+  }
+  .stockOwnerContainer,
+  .opensourceCreator-container {
+    max-width: 608px;
+  }
+  .opensourceCreator-container {
+    top: -80px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .whatAreWeDoing h1 {
+    max-width: 1034px;
+  }
+  .tablet-desktop-illustration {
+    width: 1120px;
+    height: 614px;
+    background: url("/images/illustrations-lg-2560.png") no-repeat;
+    background-size: contain;
+  }
+  .stockOwnerContainer,
+  .opensourceCreator-container {
+    max-width: 395px;
   }
 }

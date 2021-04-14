@@ -1,0 +1,242 @@
+.whoWeAre {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whoWeAreContent {
+  position: relative;
+}
+
+.whoWeAreContent::before {
+  opacity: 0.1;
+  background-image: linear-gradient(
+    to top,
+    #9bc5fa 100%,
+    #7c68b2 67%,
+    #ea70a7 32%,
+    #9bc5fa 0%
+  );
+  background-color: #9bc5fa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+  content: " ";
+}
+
+.weAreOpenContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.weAreOpenContainerBgText {
+  background: url(/images/text-bg-mobile.png) no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  width: 100%;
+  height: 110px;
+  position: relative;
+  width: 100vw;
+  height: 168px;
+}
+
+.weAre {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: 0.8px;
+  text-align: right;
+  color: #141314;
+  text-transform: uppercase;
+}
+
+.weAreOpen {
+  font-size: 42px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 0.8px;
+  color: #141314;
+  text-transform: uppercase;
+}
+
+.sustainCommunities {
+  margin-bottom: 40px;
+  position: relative;
+  top: -60px;
+}
+
+.sustainCommunities h4 {
+  font-size: 26px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: 0.8px;
+  color: #0d2bff;
+  width: 237px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sustainCommunities p {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  color: #141314;
+}
+
+.weveBeen p {
+  font-size: 26px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.54;
+  letter-spacing: 0.8px;
+  color: #2c2b2c;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .weAreOpenContainerCommunity {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+  .sustainCommunities {
+    max-width: 352px;
+    margin-bottom: 0;
+  }
+  .weAre {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.11;
+  }
+  .weAreOpen {
+    font-size: 92px;
+    font-weight: 900;
+    line-height: 1.13;
+  }
+  .weAreOpenContainerBgText {
+    display: none;
+  }
+  .weAreOpenContainerBgText-tablet {
+    background: url(/images/text-bg-tablet.png) no-repeat;
+    background-size: cover;
+    width: 96%;
+    height: 312px;
+    position: absolute;
+    top: 25%;
+    background-position: 100%;
+  }
+  .weveBeen {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  .weveBeen p {
+    max-width: 568px;
+  }
+  .openCollectiveRounded.last {
+    position: relative;
+    top: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .weAreOpenContainerCommunity {
+    width: 879px;
+  }
+  .sustainCommunities {
+    top: unset;
+  }
+  .sustainCommunities h4 {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .weAreOpenContainerBgText-tablet {
+    top: 30%;
+    width: 94%;
+  }
+  .weAreOpen {
+    font-size: 128px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+  }
+  .openCollectiveRounded.last {
+    top: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .weAreOpenContainerCommunity {
+    align-self: flex-end;
+    width: 1035px;
+  }
+  .weAreOpenContainerBgText-tablet {
+    background: url(/images/text-bg-dekstop.png) no-repeat;
+    background-size: cover;
+    background-position-x: 100%;
+    width: 97%;
+    top: 34%;
+  }
+  .sustainCommunities {
+    max-width: 501px;
+  }
+  .weveBeen {
+    align-self: flex-start;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .weveBeen {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .weAreOpenContainerCommunity {
+    width: 1368px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .weAreOpenContainerCommunity {
+    align-self: center;
+    width: 1408px;
+  }
+  .weAreOpenContainerBgText-tablet {
+    width: 77%;
+  }
+  .weveBeen {
+    margin-left: 0;
+    align-self: center;
+    width: 1408px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .weAreOpenContainerBgText-tablet {
+    width: 58%;
+  }
+}
