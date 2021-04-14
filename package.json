@@ -1,0 +1,22 @@
+{
+  "name": "openstock",
+  "version": "1.0.0",
+  "description": "Use your public stocks to support open source creators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencollective/open-stocks.git"
+  },
+  "author": "Oluwaseun Omoyajowo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opencollective/open-stocks/issues"
+  },
+  "homepage": "https://github.com/opencollective/open-stocks#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.4"
+  }
+}
