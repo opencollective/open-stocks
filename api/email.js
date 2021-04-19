@@ -1,34 +1,64 @@
-const fetch = require("cross-fetch");
+const nodemailer = require("nodemailer");
 
-function emailSubscribe(email) {
-  const username = "anystring";
-  const password = process.env.MAILCHIMP_API_KEY;
-
-  const basicAuthenticationString = Buffer.from(
-    [username, password].join(":")
-  ).toString("base64");
-
-  return fetch(process.env.MAILCHIMP_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basicAuthenticationString}`,
-      "Content-Type": "application/json; charset=utf-8",
+const getMailgun = () => {
+  const transport = {
+    service: "Mailgun",
+    auth: {
+      user: process.env.MAILGUN_USER,
+      pass: process.env.MAILGUN_PASSWORD,
     },
-    body: JSON.stringify({
-      email_address: email,
-      status: "subscribed",
-      update_existing: true,
-    }),
+  };
+
+  return nodemailer.createTransport(transport);
+};
+
+const sendMessage = (options = {}) => {
+  const {
+    from,
+    cc,
+    to,
+    bcc,
+    subject,
+    text,
+    html,
+    headers = {},
+    attachments,
+    tag,
+  } = options;
+
+  headers["X-Mailgun-Dkim"] = "yes";
+  if (tag) {
+    headers["X-Mailgun-Tag"] = tag;
+  }
+
+  return new Promise((resolve, reject) => {
+    getMailgun().sendMail(
+      { from, cc, to, bcc, subject, text, html, headers, attachments },
+      (err, info) => {
+        if (err) {
+          return reject(err);
+        } else {
+          return resolve(info);
+        }
+      }
+    );
   });
-}
+};
 
 module.exports = async (req, res) => {
   const body = req.body;
   if (!(body && body.email)) {
-    res.status(400).send("Please provide a valid input");
+    res.status(400).send("All inputs required");
   }
 
-  const result = await emailSubscribe(body.email);
-  const data = await result.json();
-  res.status(result.status).send(data);
+  await sendMessage({
+    to: "info@opencollective.com",
+    from: "Open Collective <info@opencollective.com>",
+    subject: "Open Stocks: I’m interested",
+    text: `
+        Email: ${body.email}
+      `,
+  });
+
+  res.status(200).send({ result: "Success" });
 };
