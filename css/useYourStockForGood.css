@@ -80,6 +80,45 @@
   min-width: 103px;
 }
 
+.step:hover {
+  padding: unset;
+  box-shadow: 0 4px 32px 0 rgba(246, 13, 255, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(
+    to bottom,
+    rgba(124, 104, 178, 0.6),
+    rgba(234, 112, 167, 0.6) 99%
+  );
+  border-image-slice: 1;
+  background-image: linear-gradient(to bottom, #141314, #141314),
+    linear-gradient(
+      to bottom,
+      rgba(124, 104, 178, 0.6),
+      rgba(234, 112, 167, 0.6) 99%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.step:hover .stepContent {
+  padding: 32px 16px 24px;
+}
+
+.step:hover h3 {
+  background-image: linear-gradient(130deg, #7c68b2, #ea70a7);
+  line-height: 1.13;
+  letter-spacing: 0.8px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: unset;
+}
+
+.step:hover p {
+  color: #ffffff;
+}
+
 @media screen and (min-width: 375px) {
   .step {
     position: absolute;
@@ -154,6 +193,9 @@
     background-color: #141314;
   }
 
+  .step:hover .stepContent {
+    padding: 64px 22px 112px;
+  }
   .step h3 {
     font-size: 92px;
     font-weight: bold;
@@ -225,40 +267,9 @@
     left: 432px;
     bottom: 15px;
   }
-  .step3 {
-    padding: unset;
-    box-shadow: 0 4px 32px 0 rgba(246, 13, 255, 0.1);
-    border-style: solid;
-    border-width: 1px;
-    border-image-source: linear-gradient(
-      to bottom,
-      rgba(124, 104, 178, 0.6),
-      rgba(234, 112, 167, 0.6) 99%
-    );
-    border-image-slice: 1;
-    background-image: linear-gradient(to bottom, #141314, #141314),
-      linear-gradient(
-        to bottom,
-        rgba(124, 104, 178, 0.6),
-        rgba(234, 112, 167, 0.6) 99%
-      );
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-  }
-  .step3Content {
+
+  .step:hover .stepContent {
     padding: 64px 22px 112px;
-  }
-  .step3Content h3 {
-    background-image: linear-gradient(130deg, #7c68b2, #ea70a7);
-    line-height: 1.13;
-    letter-spacing: 0.8px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: unset;
-  }
-  .step3Content p {
-    color: #ffffff;
   }
 }
 
@@ -267,7 +278,7 @@
     width: 288px;
     padding: 64px 28px 160px;
   }
-  .step3Content {
+  .step:hover .stepContent {
     padding: 64px 28px 160px;
   }
   .step2 {
@@ -277,7 +288,6 @@
   .step3 {
     left: 682px;
     top: 200px;
-    padding: unset;
   }
   .step4 {
     right: 656px;

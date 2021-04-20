@@ -157,6 +157,10 @@ html {
     display: block;
   }
 
+  span.visible-sm {
+    display: inline-block;
+  }
+
   .visible-xs {
     display: none;
   }
