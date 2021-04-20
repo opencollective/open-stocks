@@ -232,6 +232,7 @@
   cursor: pointer;
 }
 
+.submitContactBtn a,
 .submitContactBtn span {
   font-size: 22px;
   font-weight: bold;
@@ -242,13 +243,15 @@
   font-family: "canada-type-gibson";
 }
 
+.submitContactBtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .activeFormButton {
   border: solid 1px #a40ce8;
   background-color: #a40ce8;
-}
-
-.stockOwner {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -416,4 +419,9 @@
     width: 624px;
     padding: 72px 153px 72px 154px;
   }
+}
+
+h4.stockOwner,
+.stockOwner {
+  display: none;
 }

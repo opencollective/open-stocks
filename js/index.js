@@ -27,7 +27,7 @@ $(document).ready(function () {
       $(".creatorButton").removeClass("activeOpenSourceCreator");
       $("button.stockOwnerButton").addClass("activeStockOwner");
       $(".openSourceCreator").hide();
-      $(".stockOwner").show();
+      $(".stockOwner").css("display", "block");
       validateForm();
     }
   });
