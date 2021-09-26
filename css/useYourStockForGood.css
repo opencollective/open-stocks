@@ -44,12 +44,19 @@
   align-self: flex-end;
 }
 
+.stepsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .stepsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
   height: 872px;
+  width: 288px;
 }
 
 .step {
@@ -120,6 +127,9 @@
 }
 
 @media screen and (min-width: 375px) {
+  .stepsContainer {
+    width: 343px;
+  }
   .step {
     position: absolute;
   }
@@ -180,6 +190,10 @@
 
   .useYourStockForGood-container h5 {
     max-width: 480px;
+  }
+
+  .stepsContainer {
+    width: 736px;
   }
 
   .step {
@@ -262,6 +276,7 @@
   }
   .stepsContainer {
     height: 1080px;
+    width: 816px;
   }
   .step5 {
     left: 432px;
@@ -274,6 +289,9 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .stepsContainer {
+    width: 1072px;
+  }
   .step {
     width: 288px;
     padding: 64px 28px 160px;
@@ -316,7 +334,7 @@
     align-self: center;
   }
   .stepsContainer {
-    width: 100%;
+    width: 1232px;
   }
   .step {
     width: 328px;
@@ -345,6 +363,7 @@
   }
   .stepsContainer {
     height: fit-content;
+    width: 1472px;
   }
   .step {
     position: unset;
@@ -353,6 +372,9 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .stepsContainer {
+    width: 1712px;
+  }
   .useYourStockForGood-container h5 {
     align-self: center;
   }
@@ -376,5 +398,8 @@
   .step {
     width: 395px;
     margin-top: 0;
+  }
+  .stepsContainer {
+    width: 2352px;
   }
 }
